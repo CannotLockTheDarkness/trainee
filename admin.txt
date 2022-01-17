@@ -1,0 +1,18 @@
+-- Create database database1;
+--create role user1;
+--create role user2;
+--CREATE SCHEMA test;
+--CREATE TABLE test.table1  (
+	--name_id int not null generated always as identity primary key, 
+	--job_position varchar(30) NOT NULL
+--);
+--CREATE TABLE test.table2  (
+ --job_position_id int not null generated always as identity primary key, 
+ --job_position varchar(30) NOT NULL
+--);
+--GRANT ALL ON test.table1 TO user1;
+--GRANT SELECT ON test.table1 TO user2;
+--GRANT ALL ON test.table2 TO postgres;
+--GRANT DELETE ON test.table2 TO user2;
+--GRANT UPDATE ON test.table2 TO user2;
+--GRANT SELECT ON test.table2 to user2 WITH GRANT OPTION;

@@ -1,0 +1,21 @@
+create table test.users (
+	id int not null primary key,
+	name varchar(5)
+);
+
+create table test.computers (
+	id int not null primary key,
+	name varchar(10)
+);
+
+insert into test.users (id,name) values(1, 'user1');
+insert into test.users (id,name) values(2, 'user2');
+insert into test.users (id,name) values(3, 'user3');
+insert into test.users (id,name) values(4, 'user4');
+insert into test.users (id,name) values(5, 'user5');
+select * from test.users;
+insert into test.computers (id,name) values(1, 'computer1');
+insert into test.computers (id,name) values(2, 'computer2');
+insert into test.computers (id,name) values(5, 'computer5');
+select * from test.computers;
+select * from test.users where test.users.id   not in  (select test.computers.id from test.computers) ;

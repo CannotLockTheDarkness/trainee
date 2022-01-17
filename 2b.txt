@@ -1,0 +1,32 @@
+create table test.users (
+	id int not null primary key,
+	name varchar(5)
+);
+
+create table test.computers (
+	id int not null ,
+	name varchar(20)
+);
+
+insert into test.users (id,name) values(1, 'user1');
+insert into test.users (id,name) values(2, 'user2');
+insert into test.users (id,name) values(3, 'user3');
+insert into test.users (id,name) values(4, 'user4');
+insert into test.users (id,name) values(5, 'user5');
+select * from test.users;
+insert into test.computers (id,name) values(2, 'comp2');
+insert into test.computers (id,name) values(2, 'comp2');
+insert into test.computers (id,name) values(3, 'comp2/3');
+insert into test.computers (id,name) values(3, 'computer2/4');
+insert into test.computers (id,name) values(3, 'computer2/3');
+insert into test.computers (id,name) values(3, 'computer2/2');
+insert into test.computers (id,name) values(3, 'computer4');
+insert into test.computers (id,name) values(4, 'computer4/2');
+insert into test.computers (id,name) values(4, 'computer5/4');
+insert into test.computers (id,name) values(5, 'computer5');
+insert into test.computers (id,name) values(5, 'computer5/5');
+insert into test.computers (id,name) values(5, 'computer5/2');
+insert into test.computers (id,name) values(5, 'computer5/2');
+insert into test.computers (id,name) values(5, 'computer5/3');
+select tu.name, count(*)  from test.computers tc , test.users tu where tc.id = tu.id  group by tu.name;
+select tu.name, count(*)  from test.computers tc , test.users tu where tc.id = tu.id  group by tu.name having count(*)>3;

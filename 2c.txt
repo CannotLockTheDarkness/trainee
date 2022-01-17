@@ -1,0 +1,2 @@
+ALTER TABLE table1 ADD COLUMN id_num int not null generated always as identity primary key;
+select * from  table1 order by id_num desc LIMIT 5;
